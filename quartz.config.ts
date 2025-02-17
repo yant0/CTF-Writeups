@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "Silly Team",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -41,8 +41,8 @@ const config: QuartzConfig = {
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
+          light: "rgb(18, 26, 29)",
+          lightgray: "rgb(33, 47, 53)",
           gray: "#646464",
           darkgray: "#d4d4d4",
           dark: "#ebebec",
@@ -56,6 +56,7 @@ const config: QuartzConfig = {
   },
   plugins: {
     transformers: [
+      Plugin.FolderPage(),
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "filesystem"],
